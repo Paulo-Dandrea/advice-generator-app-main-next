@@ -1,0 +1,33 @@
+@import "/src/app/styles/variables";
+
+.advice-card {
+  font-size: $fs-body;
+  color: $clr-primary-400;
+  font-weight: $fw-800;
+
+  h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: $clr-accent-400;
+    letter-spacing: $size-100;
+    text-transform: uppercase;
+  }
+
+  padding: $size-700;
+  max-width: 350px;
+  width: 90%;
+  @media (min-width: $bp-mobile) {
+    max-width: 700px;
+    border-radius: 1rem;
+  }
+
+  display: grid;
+  // align-items: center;
+  gap: $size-400;
+
+  > * {
+    text-align: center;
+  }
+
+  background-color: $clr-neutral-600;
+}

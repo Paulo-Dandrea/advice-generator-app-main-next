@@ -1,6 +1,10 @@
-import Image from "next/image";
+import { AdviceCard } from "./features/advice";
 import styles from "./page.module.scss";
 
 export default function Home() {
-  return <main className={styles.main}>hello</main>;
+  return (
+    <main className={styles.main}>
+      <AdviceCard />
+    </main>
+  );
 }
