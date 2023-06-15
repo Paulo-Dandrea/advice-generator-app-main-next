@@ -1,12 +1,13 @@
 @import "/src/app/styles/variables";
 
 .advice-card {
-  font-size: $fs-body;
+  position: relative;
   color: $clr-primary-400;
   font-weight: $fw-800;
-
+  // font-size: 20px;
+  font-size: $fs-body;
+  
   h3 {
-    font-size: 20px;
     font-weight: 400;
     color: $clr-accent-400;
     letter-spacing: $size-100;
@@ -21,13 +22,42 @@
     border-radius: 1rem;
   }
 
-  display: grid;
-  // align-items: center;
-  gap: $size-400;
+  // display: grid;
+  // gap: $size-400;
 
   > * {
     text-align: center;
+
+    display: flex;
+    justify-content: center;
+  }
+
+ 
+  > :not(:last-child) {
+    padding-bottom: $size-500;
   }
 
   background-color: $clr-neutral-600;
+}
+
+.btn {
+  // position: absolute;
+  // bottom: -20px;
+  // left: 50%;
+  // transform: translateX(-50%);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+
+  text-decoration: none;
+
+  padding: $size-400;
+
+  background-color: $clr-accent-400;
+  border: none;
+  cursor: pointer;
 }
