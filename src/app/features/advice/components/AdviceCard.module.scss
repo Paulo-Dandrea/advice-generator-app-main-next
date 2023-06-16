@@ -18,10 +18,12 @@
   min-width: 330px;
   border-radius: $fs-200;
   width: 90%;
-  @media (min-width: $bp-mobile) {
-    max-width: 450px;
-    aspect-ratio: initial;
-  }
+
+  max-width: clamp(330px, 30vw, 550px);
+  // @media (min-width: 50em) {
+  //   max-width: 550px;
+  //   aspect-ratio: initial;
+  // }
 
   background-color: $clr-neutral-600;
 
@@ -32,9 +34,14 @@
     justify-content: center;
   }
 
+  // .flow
   > :not(:last-child) {
-    padding-bottom: $size-500;
+    padding-bottom: $size-600;
   }
+}
+
+.svg-container {
+  overflow: hidden;
 }
 
 .quote {

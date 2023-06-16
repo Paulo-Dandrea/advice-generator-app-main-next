@@ -41,6 +41,12 @@ body {
   line-height: 1.5;
 }
 
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
