@@ -20,10 +20,6 @@
   width: 90%;
 
   max-width: clamp(330px, 30vw, 550px);
-  // @media (min-width: 50em) {
-  //   max-width: 550px;
-  //   aspect-ratio: initial;
-  // }
 
   background-color: $clr-neutral-600;
 
@@ -74,4 +70,11 @@
   background-color: $clr-accent-400;
   border: none;
   cursor: pointer;
+
+  transition: box-shadow 0.5s ease-in-out;
+
+  &:hover, &:focus-visible {
+    box-shadow: 0 0 10px 5px $clr-accent-400;
+    
+  }
 }
