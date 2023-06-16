@@ -4,26 +4,26 @@
   position: relative;
   color: $clr-primary-400;
   font-weight: $fw-800;
-  // font-size: 20px;
   font-size: $fs-body;
-  
+
   h3 {
-    font-weight: 400;
+    font-weight: 200;
+    font-size: $fs-200;
     color: $clr-accent-400;
     letter-spacing: $size-100;
     text-transform: uppercase;
   }
 
-  padding: $size-700;
-  max-width: 350px;
+  padding: $size-600 $size-400;
+  min-width: 330px;
+  border-radius: $fs-200;
   width: 90%;
   @media (min-width: $bp-mobile) {
-    max-width: 700px;
-    border-radius: 1rem;
+    max-width: 450px;
+    aspect-ratio: initial;
   }
 
-  // display: grid;
-  // gap: $size-400;
+  background-color: $clr-neutral-600;
 
   > * {
     text-align: center;
@@ -32,19 +32,26 @@
     justify-content: center;
   }
 
- 
   > :not(:last-child) {
     padding-bottom: $size-500;
   }
+}
 
-  background-color: $clr-neutral-600;
+.quote {
+  p::before {
+    content: open-quote;
+  }
+
+  p::after {
+    content: close-quote;
+  }
 }
 
 .btn {
-  // position: absolute;
-  // bottom: -20px;
-  // left: 50%;
-  // transform: translateX(-50%);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
 
   display: inline-flex;
   justify-content: center;

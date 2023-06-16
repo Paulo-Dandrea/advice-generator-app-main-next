@@ -3,22 +3,26 @@
 import { useEffect, useState } from "react";
 import s from "./AdviceCard.module.scss";
 import { getAdvice } from "../api/getAdvice";
-import axios from "axios";
+import { AdviceCardDivider } from "./AdviceCardDivider";
+
 
 export const AdviceCard = () => {
-  const [advice, setAdvice] = useState({ id: 0, text: "" });
+  const [advice, setAdvice] = useState({
+    id: 0,
+    text: "It is easy to sit up and take notice, what's difficult is getting up and taking action.",
+  });
 
-  async function fetchAdvice() {
-    const { id, advice } = await getAdvice();
-    setAdvice({ id: id, text: advice });
-  }
+  // async function fetchAdvice() {
+  //   const { id, advice } = await getAdvice();
+  //   setAdvice({ id: id, text: advice });
+  // }
 
-  useEffect(() => {
-    fetchAdvice();
-  }, []);
+  // useEffect(() => {
+  //   fetchAdvice();
+  // }, []);
 
   const handleClick = () => {
-    fetchAdvice();
+    // fetchAdvice();
   };
 
   return (
@@ -27,23 +31,17 @@ export const AdviceCard = () => {
       {advice.text ? (
         <>
           <h3>Advice #{advice.id}</h3>
-          <p>{advice.text}</p>
+          {/* <p className={s.quote}>{`"${advice.text}"`}</p> */}
+          <div className={s.quote}>
+            <p>{`${advice.text}`}</p>
+          </div>
         </>
       ) : (
         <p>Loading...</p>
       )}
 
-      <div>
-        <svg width="295" height="16" xmlns="http://www.w3.org/2000/svg">
-          <g fill="none" fill-rule="evenodd">
-            <path fill="#4F5D74" d="M0 8h122v1H0zM173 8h122v1H173z" />
-            <g transform="translate(138)" fill="#CEE3E9">
-              <rect width="6" height="16" rx="3" />
-              <rect x="14" width="6" height="16" rx="3" />
-            </g>
-          </g>
-        </svg>
-      </div>
+      <AdviceCardDivider />
+
       <div>
         <button className={s.btn} onClick={handleClick}>
           <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">

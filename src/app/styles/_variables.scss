@@ -15,11 +15,13 @@ $clr-neutral-400: hsl(217, 19%, 38%);
 $clr-neutral-600: hsl(217, 19%, 24%);
 $clr-neutral-900: hsl(218, 23%, 16%);
 
-$fs-400: 1.75rem; // 28px
+$fs-200: .85rem;
+$fs-400: 1.25rem; // 28px
 
 $fw-800: 800;
 
 $fs-body: $fs-400;
+$fs-h3: $fs-200; 
 
-$bp-mobile: 375px;
+$bp-mobile: 374px;
 
